@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     //Main output label
     @IBOutlet weak var mainOutput: UILabel!
     
+    @IBOutlet weak var historicalOutput: UILabel!
+    
+    
     var currentInput: String = "0" {
         didSet {
             mainOutput.text = currentInput
@@ -25,6 +28,26 @@ class ViewController: UIViewController {
     
     var decimalChoice: Int = 0
     var currentOperation: Operation?
+    
+    var lastEquation: (Double, Double, Operation, Double)? {
+        didSet {
+            var operationText:String = ""
+            if let lastEquation = lastEquation {
+                switch lastEquation.2 {
+                case .sum:
+                    operationText = "+"
+                case .subtract:
+                    operationText = "-"
+                case .multiply:
+                    operationText = "*"
+                case .divide:
+                    operationText = "/"
+                }
+                
+                historicalOutput.text = "\(lastEquation.0)\(operationText)\(lastEquation.1) = \(lastEquation.3)"
+            }
+        }
+    }
     
     enum Operation {
         case sum, subtract, multiply, divide
@@ -45,45 +68,63 @@ class ViewController: UIViewController {
     }
     
     //Converts current input to double and stores in "recordedNumbers", changes current operation to .sum
-    @IBAction func sum(_ sender: UIButton) {
-        guard let currentInputInDouble = Double(currentInput) else {
-            fatalError("Current input cannot be converted into a double number.")
-        }
-        currentOperation = .sum
-        recordedNumbers.append(currentInputInDouble)
-        let recordedNumber: String = currentInput
-        currentInput = "0"
-        mainOutput.text = recordedNumber
-
-    }
-    
-    //Ends current operation and returns result to mainOutput label.
-    @IBAction func equals(_ sender: UIButton) {
-        guard let currentInputInDouble = Double(currentInput) else {
-            fatalError("Current input cannot be converted into a double number.")
-        }
-        guard let lastRecordedNumber = recordedNumbers.last else {
+    @IBAction func operate(_ sender: UIButton) {
+        if let operation = sender.currentTitle {
+            if operation == "+" {
+                currentOperation = .sum
+            }
+            if operation == "-" {
+                currentOperation = .subtract
+            }
+            if operation == "*" {
+                currentOperation = .multiply
+            }
+            if operation == "/" {
+                currentOperation = .divide
+            }
+            
+            guard let currentInputInDouble = Double(currentInput) else {
+                fatalError("Current input cannot be converted into a double number.")
+            }
+            recordedNumbers.append(currentInputInDouble)
+            let recordedNumber: String = currentInput
             currentInput = "0"
-            return
+            mainOutput.text = recordedNumber
+            
         }
-        switch currentOperation {
-        case .sum:
-            mainOutput.text = String(lastRecordedNumber + currentInputInDouble)
-        case .subtract:
-            break
-        case .multiply:
-            break
-        case .divide:
-            break
-        case .none:
-            break
+    }
+        
+        //Ends current operation and returns result to mainOutput label.
+        @IBAction func equals(_ sender: UIButton) {
+            guard let currentInputInDouble = Double(currentInput) else {
+                fatalError("Current input cannot be converted into a double number.")
+            }
+            guard let lastRecordedNumber = recordedNumbers.last else {
+                currentInput = "0"
+                return
+            }
+            guard let operation = currentOperation else {
+                return
+            }
+            var result: Double = .zero
+            switch currentOperation {
+            case .sum:
+                result = lastRecordedNumber + currentInputInDouble
+            case .subtract:
+                result = lastRecordedNumber - currentInputInDouble
+            case .multiply:
+                result = lastRecordedNumber * currentInputInDouble
+            case .divide:
+                result = lastRecordedNumber / currentInputInDouble
+            case .none:
+                break
+            }
+            lastEquation = (lastRecordedNumber, currentInputInDouble, operation, result)
+            mainOutput.text = String(result)
         }
         
+        @IBAction func reset(_ sender: UIButton) {
+            currentOperation = nil
+            currentInput = "0"
+        }
     }
-    
-    @IBAction func reset(_ sender: UIButton) {
-        currentOperation = nil
-        currentInput = "0"
-    }
-}
-
