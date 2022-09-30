@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D0450E92-AC7B-464F-961F-1BEAFFBFA784"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculator/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "currentInput"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - 2cf253eb2007c672"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.currentInput.getter : Swift.String"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - 1790dd85672ef64e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.currentInput.setter : Swift.String"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - c40f64bef616127d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.currentInput.modify : Swift.String"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - c6a2690e32c39a4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.currentInput.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - 2cfc4952dd93ae92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Calculator.ViewController"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "AF17B1F1-A492-46A5-8415-C565ACFEDC4E - 611ddfa0d7af0261"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculator.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Calculator.ViewController&gt;"
+                  moduleName = "Calculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiralpduman/Developer/Pazarama%20Patika%20iOS%20Bootcamp%20/Assignments/week2_hw2-emiralpduman/Calculator/Calculator/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
