@@ -44,6 +44,9 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="34.333333333333336"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="tinted" title="AC"/>
+                                                                <connections>
+                                                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="By1-pY-LJ6"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnW-TO-9Ot">
                                                                 <rect key="frame" x="54.666666666666657" y="0.0" width="46.666666666666657" height="34.333333333333336"/>
@@ -189,11 +192,17 @@
                                                         <rect key="frame" x="0.0" y="126.99999999999999" width="34.333333333333336" height="34.333333333333329"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                                        <connections>
+                                                            <action selector="sum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXD-93-cAc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-HN-KFr">
                                                         <rect key="frame" x="0.0" y="169.33333333333331" width="34.333333333333336" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" title="="/>
+                                                        <connections>
+                                                            <action selector="equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8i-oC-wOy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
