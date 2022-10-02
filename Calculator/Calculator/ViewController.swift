@@ -187,6 +187,21 @@ class ViewController: UIViewController {
         guard var currentInputInDouble = Double(currentInput) else {
             return
         }
-        currentInput = String(currentInputInDouble / 100)
+        if let previousOperation = currentOperation {
+            guard let lastRecordedNumber = recordedNumbers.last else {
+                return
+            }
+            var result: Double
+            let percantage = currentInputInDouble
+            let baseNumber = lastRecordedNumber
+            let newOperand = currentInputInDouble * baseNumber / 100
+            currentInput = String(newOperand)
+            
+
+            
+            
+        } else {
+            currentInput = String(currentInputInDouble / 100)
+        }
     }
 }
