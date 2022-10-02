@@ -316,8 +316,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="divideButton" destination="iK7-mv-TPc" id="MMl-oe-fU5"/>
                         <outlet property="historicalOutput" destination="hdC-TK-yGD" id="D1O-uK-4og"/>
                         <outlet property="mainOutput" destination="bPs-Al-ffJ" id="3SW-jZ-dBv"/>
+                        <outlet property="minusButton" destination="9Mo-4Q-LYF" id="FIn-07-S0q"/>
+                        <outlet property="multiplyButton" destination="teC-5L-ZA8" id="wjP-w1-WkX"/>
+                        <outlet property="plusButton" destination="qzX-i4-bgw" id="ATm-Nl-dL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

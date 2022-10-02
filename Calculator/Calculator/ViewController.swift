@@ -13,6 +13,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+        
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var multiplyButton: UIButton!
+    @IBOutlet weak var divideButton: UIButton!
     
     //Presents main output
     @IBOutlet weak var mainOutput: UILabel!
@@ -31,7 +36,47 @@ class ViewController: UIViewController {
     var decimalChoice: Int = 0
     
     //Ongoing calculation operation. Sum, subtract etc.
-    var currentOperation: Operation?
+    var currentOperation: Operation? {
+        didSet {
+            var operationButton: UIButton?
+            
+            switch currentOperation {
+            case .sum:
+                operationButton = plusButton
+            case .subtract:
+                operationButton = minusButton
+            case .multiply:
+                operationButton = multiplyButton
+            case .divide:
+                operationButton = divideButton
+            case .none:
+                break
+            }
+            if let button = operationButton {
+                button.isSelected = true
+            }
+        }
+        willSet {
+            var operationButton: UIButton?
+            
+            switch currentOperation {
+            case .sum:
+                operationButton = plusButton
+            case .subtract:
+                operationButton = minusButton
+            case .multiply:
+                operationButton = multiplyButton
+            case .divide:
+                operationButton = divideButton
+            case .none:
+                break
+            }
+            if let button = operationButton {
+                button.isSelected = false
+            }
+            
+        }
+    }
     
     //Last completed calculation
     var lastEquation: (Double, Double, Operation, Double)? {
@@ -73,8 +118,6 @@ class ViewController: UIViewController {
     //Converts current input to double and stores in "recordedNumbers", changes current operation to .sum
     @IBAction func operate(_ sender: UIButton) {
         if let operation = sender.currentTitle {
-            
-            
             if let previousOperation = currentOperation {
                 guard let currentInputInDouble = Double(currentInput) else {
                     fatalError("Current input cannot be converted into a double number.")
