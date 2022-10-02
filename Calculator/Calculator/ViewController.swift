@@ -182,4 +182,11 @@ class ViewController: UIViewController {
         }
         currentInput = String(currentInputInDouble * -1)
     }
+    
+    @IBAction func percentage(_ sender: UIButton) {
+        guard var currentInputInDouble = Double(currentInput) else {
+            return
+        }
+        currentInput = String(currentInputInDouble / 100)
+    }
 }
