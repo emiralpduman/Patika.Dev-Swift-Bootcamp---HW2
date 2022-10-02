@@ -14,22 +14,26 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //Main output label
+    //Presents main output
     @IBOutlet weak var mainOutput: UILabel!
     
-    //Historical output label
+    //Presents historical output
     @IBOutlet weak var historicalOutput: UILabel!
     
-    
+    //Ongoing input instance from user
     var currentInput: String = "0" {
         didSet {
             mainOutput.text = currentInput
         }
     }
     
+    //Decimal digit count of user's input
     var decimalChoice: Int = 0
+    
+    //Ongoing calculation operation. Sum, subtract etc.
     var currentOperation: Operation?
     
+    //Last completed calculation
     var lastEquation: (Double, Double, Operation, Double)? {
         didSet {
             var operationText:String = ""
@@ -50,10 +54,6 @@ class ViewController: UIViewController {
                 historicalOutput.text = ""
             }
         }
-    }
-    
-    enum Operation {
-        case sum, subtract, multiply, divide
     }
     
     //Keeps record of all clicked numbers in an array
@@ -170,12 +170,14 @@ class ViewController: UIViewController {
         mainOutput.text = String(result)
     }
     
+    //Clears and resets the calculator
     @IBAction func reset(_ sender: UIButton) {
         currentOperation = nil
         currentInput = "0"
         lastEquation = nil
     }
     
+    //Changes the sign of current user input
     @IBAction func toggleSign(_ sender: UIButton) {
         guard let currentInputInDouble = Double(currentInput) else {
             return
@@ -183,6 +185,7 @@ class ViewController: UIViewController {
         currentInput = String(currentInputInDouble * -1)
     }
     
+    //Percentage operation. Acts different if there is ongoing calculation.
     @IBAction func percentage(_ sender: UIButton) {
         guard let currentInputInDouble = Double(currentInput) else {
             return
@@ -199,6 +202,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Square root operation. Acts different if there is ongoing calculation.
     @IBAction func squareRoot(_ sender: UIButton) {
         guard let currentInputInDouble = Double(currentInput) else {
             return
@@ -211,6 +215,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Square operation. Acts different if there is ongoing calculation.
     @IBAction func square(_ sender: UIButton) {
         guard let currentInputInDouble = Double(currentInput) else {
             return
@@ -223,6 +228,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Factorial. operation. Acts different if there is ongoing calculation.
     @IBAction func factorial(_ sender: UIButton) {
         guard let currentInputInDouble = Double(currentInput) else {
             return

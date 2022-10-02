@@ -13,6 +13,7 @@
 		F361388F28E62778007C0137 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F361388D28E62778007C0137 /* Main.storyboard */; };
 		F361389128E6277A007C0137 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F361389028E6277A007C0137 /* Assets.xcassets */; };
 		F361389428E6277A007C0137 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F361389228E6277A007C0137 /* LaunchScreen.storyboard */; };
+		F3FA2A2E28EA26EF00C2B7A5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2A2D28EA26EF00C2B7A5 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F361389028E6277A007C0137 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F361389328E6277A007C0137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F361389528E6277A007C0137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3FA2A2D28EA26EF00C2B7A5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F361388728E62778007C0137 /* AppDelegate.swift */,
 				F361388928E62778007C0137 /* SceneDelegate.swift */,
+				F3FA2A2D28EA26EF00C2B7A5 /* Model.swift */,
 				F361388B28E62778007C0137 /* ViewController.swift */,
 				F361388D28E62778007C0137 /* Main.storyboard */,
 				F361389028E6277A007C0137 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				F361388C28E62778007C0137 /* ViewController.swift in Sources */,
 				F361388828E62778007C0137 /* AppDelegate.swift in Sources */,
 				F361388A28E62778007C0137 /* SceneDelegate.swift in Sources */,
+				F3FA2A2E28EA26EF00C2B7A5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
