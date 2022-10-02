@@ -177,29 +177,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toggleSign(_ sender: UIButton) {
-        guard var currentInputInDouble = Double(currentInput) else {
+        guard let currentInputInDouble = Double(currentInput) else {
             return
         }
         currentInput = String(currentInputInDouble * -1)
     }
     
     @IBAction func percentage(_ sender: UIButton) {
-        guard var currentInputInDouble = Double(currentInput) else {
+        guard let currentInputInDouble = Double(currentInput) else {
             return
         }
-        if let previousOperation = currentOperation {
+        if currentOperation != nil {
             guard let lastRecordedNumber = recordedNumbers.last else {
                 return
             }
-            var result: Double
-            let percantage = currentInputInDouble
             let baseNumber = lastRecordedNumber
             let newOperand = currentInputInDouble * baseNumber / 100
             currentInput = String(newOperand)
-            
-
-            
-            
         } else {
             currentInput = String(currentInputInDouble / 100)
         }
