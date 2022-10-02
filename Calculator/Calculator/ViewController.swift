@@ -198,4 +198,19 @@ class ViewController: UIViewController {
             currentInput = String(currentInputInDouble / 100)
         }
     }
+    
+    @IBAction func squareRoot(_ sender: UIButton) {
+        guard let currentInputInDouble = Double(currentInput) else {
+            return
+        }
+        if currentOperation != nil {
+            guard let lastRecordedNumber = recordedNumbers.last else {
+                return
+            }
+            let newOperand = currentInputInDouble.squareRoot()
+            currentInput = String(newOperand)
+        } else {
+            currentInput = String(currentInputInDouble.squareRoot())
+        }
+    }
 }
