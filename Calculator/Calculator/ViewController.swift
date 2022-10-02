@@ -179,7 +179,7 @@ class ViewController: UIViewController {
     @IBAction func toggleSign(_ sender: UIButton) {
         guard var currentInputInDouble = Double(currentInput) else {
             return
-        }        
+        }
         currentInput = String(currentInputInDouble * -1)
     }
 }
