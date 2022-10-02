@@ -204,13 +204,44 @@ class ViewController: UIViewController {
             return
         }
         if currentOperation != nil {
-            guard let lastRecordedNumber = recordedNumbers.last else {
-                return
-            }
             let newOperand = currentInputInDouble.squareRoot()
             currentInput = String(newOperand)
         } else {
             currentInput = String(currentInputInDouble.squareRoot())
         }
     }
+    
+    @IBAction func square(_ sender: UIButton) {
+        guard let currentInputInDouble = Double(currentInput) else {
+            return
+        }
+        if currentOperation != nil {
+            let newOperand = currentInputInDouble * currentInputInDouble
+            currentInput = String(newOperand)
+        } else {
+            currentInput = String(currentInputInDouble * currentInputInDouble)
+        }
+    }
+    
+    @IBAction func factorial(_ sender: UIButton) {
+        guard let currentInputInDouble = Double(currentInput) else {
+            return
+        }
+        if currentOperation != nil {
+            let newOperand: Int
+            var result: Int = 1
+            for number in 1...Int(currentInputInDouble.rounded()) {
+                result *= number
+            }
+            newOperand = result
+            currentInput = String(newOperand)
+        } else {
+            var result: Int = 1
+            for number in 1...Int(currentInputInDouble.rounded()) {
+                result *= number
+            }
+            currentInput = String(result)
+        }
+    }
+    
 }

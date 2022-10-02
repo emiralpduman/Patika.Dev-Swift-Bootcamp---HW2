@@ -53,7 +53,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="x²"/>
                                                                 <connections>
-                                                                    <action selector="toggleSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jmr-5V-wJi"/>
+                                                                    <action selector="square:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFc-Kc-sVW"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-QF-7Pv">
@@ -61,7 +61,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="x!"/>
                                                                 <connections>
-                                                                    <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0Q-cS-jFk"/>
+                                                                    <action selector="factorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOI-3F-ZWb"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
